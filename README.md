@@ -1,7 +1,3 @@
-Here's a README file for your Godot project that uses mesh generation and noise for creating a landscape:
-
----
-
 # Godot Landscape Generator with Mesh and Noise
 
 This project demonstrates how to generate a 3D terrain in the Godot Engine using the `FastNoiseLite` module to create Perlin noise-based heightmaps. It generates a landscape by manipulating a mesh through vertex-based noise and displays the terrain in real-time. You can adjust the size and characteristics of the terrain through exported properties.
