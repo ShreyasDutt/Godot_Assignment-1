@@ -57,6 +57,3 @@ This project demonstrates how to generate a 3D terrain in the Godot Engine using
 
 Camera views can be changed according to the need.
 
-
-
-![Landscape Example](path_to_screenshot)
