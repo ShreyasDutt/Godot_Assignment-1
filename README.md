@@ -15,6 +15,8 @@ This project demonstrates how to generate a 3D terrain in the Godot Engine using
 
 ## Getting Started
 
+- Basic understanding of noise, FastnoiseLite, Textures and Godot.
+
 ### Prerequisites
 
 - **Godot Engine:** Make sure you have Godot Engine installed (preferably version 4.0 or higher).
@@ -44,8 +46,17 @@ This project demonstrates how to generate a 3D terrain in the Godot Engine using
 ### Customization
 
 - Modify the noise type by adjusting the `noise_type` of `FastNoiseLite` for different effects (e.g., Simplex noise).
+- For this project we have used Perlin noise, use of any other noise is also possible.
 - Experiment with different scaling factors and noise frequencies to produce varied terrain styles.
 
 ### Screenshots
+- Editor View
+- ![image](https://github.com/user-attachments/assets/e412ed63-9508-4f85-b3a1-ac296ed84a02)
+- Run time view
+- ![image](https://github.com/user-attachments/assets/1593678e-51af-4acc-839b-1bac82058465)
+
+Camera views can be changed according to the need.
+
+
 
 ![Landscape Example](path_to_screenshot)
