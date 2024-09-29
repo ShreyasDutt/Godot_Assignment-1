@@ -6,12 +6,10 @@ extends MeshInstance3D
 @export var update = false
 @export var clear_vert_vis = false
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	generate_terrain()
 
 func generate_terrain():
-	# Create the mesh and SurfaceTool
 	var a_mesh = ArrayMesh.new()
 	var suftool = SurfaceTool.new()
 	var n = FastNoiseLite.new()
@@ -22,7 +20,6 @@ func generate_terrain():
 	
 	var vertices = []  # Store vertices
 	
-	# Generate vertices
 	for z in range(zSize + 1):
 		for x in range(xSize + 1):
 			var y = n.get_noise_2d(float(x*2), float(z*2)) * 5  # Now x and z are in scope
@@ -36,7 +33,6 @@ func generate_terrain():
 			vertices.append(vertex)
 			draw_sphere(vertex)  # Optionally visualize vertices with spheres
 	
-	# Generate triangles
 	for z in range(zSize):
 		for x in range(xSize):
 			var i = z * (xSize + 1) + x
@@ -54,7 +50,6 @@ func generate_terrain():
 			suftool.add_index(i_right)
 			suftool.add_index(i_below_right)
 	
-	# Commit the mesh and assign it to the MeshInstance3D
 	suftool.generate_normals()
 	a_mesh = suftool.commit()
 	mesh = a_mesh
